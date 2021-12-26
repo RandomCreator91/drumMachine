@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script>
+
+        function play(str){
+            
+            if (str ==='q' || str ==='Q'){
+            document.getElementById('display').innerText="Q";
+        }else if( str ==='w'|| str ==='W'){
+            document.getElementById('display').innerText="W";
+        }else if(str ==='e'|| str ==='E'){
+            document.getElementById('display').innerText="E";
+        }else if(str ==='a'|| str ==='A'){
+            document.getElementById('display').innerText="A";
+        }else if(str ==='s'|| str ==='S'){
+            document.getElementById('display').innerText="S";
+        }else if(str ==='d'|| str ==='D'){
+            document.getElementById('display').innerText="D";
+        }else if(str ==='z'|| str ==='Z'){
+            document.getElementById('display').innerText="Z";
+        }else if(str ==='x'|| str ==='X'){
+            document.getElementById('display').innerText="X";
+        }else if(str ==='c'|| str ==='C'){
+            document.getElementById('display').innerText="C"
+        }
+
+
+
+
+
+
+            let audio = document.getElementById(str);
+            audio.play();
+        }
+
+        window.document.onkeyup= function(event) 
+        {
+            
+            let keystroke = event.key;
+            if (keystroke ==='q' || keystroke ==='Q'){
+            play('Q');
+        }else if( keystroke ==='w'|| keystroke ==='W'){
+            play('W');
+        }else if(keystroke ==='e'|| keystroke ==='E'){
+            play('E');
+        }else if(keystroke ==='a'|| keystroke ==='A'){
+            play('A');
+        }else if(keystroke ==='s'|| keystroke ==='S'){
+            play('S');
+        }else if(keystroke ==='d'|| keystroke ==='D'){
+            play('D');
+        }else if(keystroke ==='z'|| keystroke ==='Z'){
+            play('Z');
+        }else if(keystroke ==='x'|| keystroke ==='X'){
+            play('X');
+        }else if(keystroke ==='c'|| keystroke ==='C'){
+            play('C');
+
+    }
+}
+
+    </script>
+
+ 
+    <title>Guitar Machine</title>
+</head>
+<body>
+    <div class ="container text-center" id="drum-machine">
+    <h1 class ="text-center">Drum Machine Freecodecamp</h1>
+    <div class ="card my-3">
+        <div class="card-body ">
+    <div id="display">Please press a Key...</div>
+</div>
+</div>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('Q')" id="drum-0">
+        Q
+        <audio src="./clip/0.wav" class="clip" id="Q">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg"  onclick="play('W')" id="drum-1">
+        W
+        <audio src="./clip/1.wav" class="clip" id="W">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('E')" id="drum-2">
+        E
+        <audio src="./clip/2.wav" class="clip" id="E">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('A')" id="drum-3">
+        A
+        <audio src="./clip/3.wav" class="clip" id="A">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('S')" id="drum-4">
+        S
+        <audio src="./clip/4.wav" class="clip" id="S">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('D')" id="drum-5">
+        D
+        <audio src="./clip/5.wav" class="clip" id="D">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('Z')" id="drum-6">
+        Z
+        <audio src="./clip/6.wav" class="clip" id="Z">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('X')" id="drum-7">
+        X
+        <audio src="./clip/7.wav" class="clip" id="X">
+    </button>
+    <button class="drum-pad btn btn-outline-primary btn-block btn-lg" onclick="play('C')" id="drum-8">
+        C
+        <audio src="./clip/8.wav" class="clip" id="C">
+    </button>
+
+    </div>
+ <!--Javascript CDN and Scripts-->   
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src ="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
